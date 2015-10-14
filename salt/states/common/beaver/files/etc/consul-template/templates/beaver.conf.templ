@@ -1,0 +1,5 @@
+[beaver]
+redis_url: redis://{{range service "logging"}}{{.Address}}{{end}}:6379/0
+logstash_version: 1
+output: /var/log/beaver/beaver.log
+sincedb_path: /tmp/since.db

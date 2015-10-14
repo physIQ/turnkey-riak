@@ -1,0 +1,11 @@
+[Unit]
+Description=python daemon that munches on logs and sends their contents to logstash
+
+[Service]
+ExecStart=/usr/bin/beaver -c /etc/beaver/beaver.conf -C /etc/beaver/conf.d -t redis -D -P /var/run/beaver.pid
+PIDFile=/var/run/beaver.pid
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

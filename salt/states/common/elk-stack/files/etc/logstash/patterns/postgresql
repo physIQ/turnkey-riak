@@ -1,0 +1,5 @@
+# postgresql pg_log format pattern for log_line_prefix = '[%m][%e][%p] %q[%h][%u][%d] '
+PGSQLLEVEL ([Ll]og|LOG|[De]etail|DETAIL|[Aa]lert|ALERT|[Tt]race|TRACE|[Dd]ebug|DEBUG|[Nn]otice|NOTICE|[Ii]nfo|INFO|[Ww]arn?(?:ing)?|WARN?(?:ING)?|[Ee]rr?(?:or)?|ERR?(?:OR)?|[Cc]rit?(?:ical)?|CRIT?(?:ICAL)?|[Ff]atal|FATAL|[Ss]evere|SEVERE|EMERG(?:ENCY)?|[Ee]merg(?:ency)?)
+POSTGRESQL \[%{TIMESTAMP_ISO8601:timestamp}%{SPACE}%{TZ:timezone}\]\[%{GREEDYDATA:code}\]\[%{POSINT:pid}\] %{GREEDYDATA:message}
+POSTGRESQLSESSION \[%{HOST:hostname}\]\[%{GREEDYDATA:username}\]\[%{GREEDYDATA:database}\] %{PGSQLLEVEL:level}: %{GREEDYDATA:message}
+POSTGRESQLNOSESSION %{PGSQLLEVEL:level}: %{GREEDYDATA:message}

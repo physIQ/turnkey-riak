@@ -1,0 +1,3 @@
+ELASTICSEARCHLOG \[%{TIMESTAMP_ISO8601:timestamp}\]\[%{DATA:level}%{SPACE}\]\[%{DATA:identifier}%{SPACE}\]%{SPACE}\[%{DATA:node}\]%{SPACE}(?<message>(.|\r|\n)*)
+ELASTICSEARCHSLOWQUERYLOG \[%{DATA:index}\]\[%{DATA:shard}\] took\[%{DATA:took}\], took_millis\[%{DATA:took_millis}\], types\[%{DATA:types}\], stats\[%{DATA:stats}\], search_type\[%{DATA:search_type}\], total_shards\[%{DATA:total_shards}\], source\[(?<source_body>(.|\r|\n)*\], extra_source\[)%{DATA:extra_source}
+ELASTICSEARCHSLOWINDEXLOG \[%{DATA:index}\]\[%{DATA:shard}\] took\[%{DATA:took}\], took_millis\[%{DATA:took_millis}\], type\[%{DATA:types}\], id\[%{DATA:id}\], routing\[%{DATA:routing}\], source\[(?<source_body>(.|\r|\n)*)\]$

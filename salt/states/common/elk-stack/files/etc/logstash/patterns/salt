@@ -1,0 +1,6 @@
+# Salt grok patterns
+#   put this in /etc/logstash/patterns/salt
+#
+SALTTS %{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{HOUR}:%{MINUTE}:%{SECOND},%{INT}
+SALTNAME [a-zA-Z0-9._]+
+SALTLOG %{SALTTS:timestamp} \[%{SALTNAME:logger}\s*\]\[%{USERNAME:level}\s*\] %{GREEDYDATA:message}

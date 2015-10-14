@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7fac073-f62d-4253-a6a9-008dc4001121" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix/.init.sls.swp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul-template/files/consul-template_0.10.0_linux_amd64.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/stack.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/files/etc/consul.d/000-agent.json.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/files/etc/consul.d/000-server.json.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/000-variables.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/consul.d/001-bootstrap.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/001-resources.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/files/etc/consul.d/002-join.json.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/002-modules.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul-template/files/etc/consul-template.d/configs/01-base.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/etc/security/limits.d/30-riak.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/srv/www/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/srv/www/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/reactor/auth-complete.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/reactor/auth-pending.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/var/lib/zabbix/bin/autoregister-jmx.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/banana/files/etc/consul-template.d/templates/banana.conf.templ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/banana/files/etc/consul-template.d/configs/banana.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/consul-template/templates/beaver.conf.templ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/beaver/beaver.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/consul-template/configs/beaver.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/init/beaver.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/systemd/system/beaver.service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/consul.d/bind-master.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/tmp/cluster-join.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/cluster.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/configure_zabbix.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/consul-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/consul-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/consul-server.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/consul-server.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul-template/files/etc/systemd/system/consul-template.service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/consul-template.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/files/etc/systemd/system/consul.service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/consul.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/postgres/consul.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/riak/consul.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/consul.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/consul.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/etc/crontab" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/disk-regexp.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/disks.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/beaver/conf.d/elasticsearch.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/var/lib/zabbix/bin/elasticsearch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/elasticsearch/elasticsearch.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/elasticsearch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/consul.d/elk-stack.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/var/lib/zabbix/bin/find_dbname.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/var/lib/zabbix/bin/find_dbname_table.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/etc/consul-template.d/templates/haproxy.cfg.templ" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/etc/consul-template.d/configs/haproxy.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/etc/consul.d/haproxy.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/var/lib/zabbix/bin/haproxy_discovery.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/etc/nginx/sites-available/http.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/banana/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul-template/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/gcc/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/haproxy/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/java/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/misc/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/php/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/postgres/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/redis/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/riak/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/init.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/haproxy/init.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/haproxy-pools/init.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/logging/init.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/riak/init.tf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/nginx/locations/kibana.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/nginx/sites-available/kibana.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/opt/kibana/config/kibana.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/systemd/system/kibana4.service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/opt/logstash/filters/level.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/consul.d/logging.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/elasticsearch/logging.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/beaver/conf.d/logstash.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/conf.d/logstash.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/systemd/system/logstash.service" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logrotate.d/logstash" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/master_startup.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/minion_startup.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/tmp/mkdisk.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/tmp/mkdisks.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/consul.d/monitor.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/var/lib/zabbix/bin/nginx-check.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/zabbix/zabbix_agentd.d/nginx-params.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/etc/beaver/conf.d/nginx.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/etc/nginx/nginx.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/nginx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/etc/logrotate.d/nginx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/pg_hba.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/etc/nginx/locations/php.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/php/files/etc/php.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/postgres/files/etc/beaver/conf.d/postgres.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/postgres/files/etc/consul.d/postgresql.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/postgresql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/postgresql_check.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/var/lib/zabbix/bin/queryDisks.pl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/rabbitmq-regexp.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/redis/files/etc/beaver/conf.d/redis.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/redis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/rest-api" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/etc/riak/riak.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/riak/files/etc/consul.d/riak.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/nginx/files/srv/www/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/beaver/conf.d/salt.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/beaver/files/etc/logrotate.d/salt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/salt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/consul/server.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/pillar/servers.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/consul.d/smtp-relay.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/pillar/software.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/riak/files/etc/consul.d/solr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/httpd/conf.d/ssl.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/pillar/stack.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/nginx/sites-available/stub_status.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/elk-stack/files/etc/logstash/patterns/supervisord" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/etc/zabbix/zabbix_agentd.d/systemd_status.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_app_beaver.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_app_elasticsearch.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_app_haproxy.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_app_logstash.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_app_riak.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_linux_disk_io.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_nginx.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_php_fpm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/tmp/zabbix_templates/template_redis2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/pillar/top.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/top.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/tuning.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/zabbix/zabbix_agentd.d/userparameter_es.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/etc/zabbix/zabbix_agentd.d/userparameter_haproxy.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/etc/zabbix/zabbix_agentd.d/userparameter_linux_disks.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/zabbix/zabbix_agentd.d/userparameter_pgsql.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/etc/zabbix/zabbix_agentd.d/userparameter_riak.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/php/files/etc/php-fpm.d/www.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/etc/consul.d/zabbix-agent.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/zabbix-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/zabbix-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/zabbix-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/zabbix-agent.sls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/etc/logrotate.d/zabbix-agent" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/consul.d/zabbix-server.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/logrotate.d/zabbix-server" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/zabbix/web/zabbix.conf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/httpd/conf.d/zabbix.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/nginx/locations/zabbix.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-agent/files/etc/yum.repos.d/zabbix.repo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/haproxy/files/etc/zabbix/zabbix_agentd.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/zabbix/zabbix_agentd.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/zabbix_agentd.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/monitor/files/etc/zabbix/zabbix_agentd.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/riak/files/etc/zabbix/zabbix_agentd.conf.jinja" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/zabbix/zabbix_java_gateway.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/common/zabbix-server/files/etc/zabbix/zabbix_server.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/etc/zabbix/zabbix_agentd.d/zbx_redis.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/salt/states/profiles/logging/files/var/lib/zabbix/bin/zbx_redis_stats.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="turnkey-riak.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="turnkey-riak" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="002-modules.tf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/002-modules.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="640" />
+    <option name="y" value="27" />
+    <option name="width" value="640" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="salt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="states" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="salt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnkey-riak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="salt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pillar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7fac073-f62d-4253-a6a9-008dc4001121" name="Default" comment="" />
+      <created>1444863695685</created>
+      <option name="number" value="Default" />
+      <updated>1444863695685</updated>
+      <workItem from="1444863697360" duration="267000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="267000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="640" y="27" width="640" height="743" extended-state="4" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5167224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/002-modules.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

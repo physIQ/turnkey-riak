@@ -1,0 +1,26 @@
+/var/log/nginx/access.log {
+    notifempty
+    compress
+    delaycompress
+    size 20k
+    daily
+    create 0644 nginx nginx
+    sharedscripts
+    postrotate
+            /bin/systemctl reload nginx
+    endscript
+}
+
+/var/log/nginx/error.log {
+    missingok
+    notifempty
+    compress
+    delaycompress
+    size 20k
+    daily
+    create 0644 nginx nginx
+    sharedscripts
+    postrotate
+            /bin/systemctl reload nginx
+    endscript
+}

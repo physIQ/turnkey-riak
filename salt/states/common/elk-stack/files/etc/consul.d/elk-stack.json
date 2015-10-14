@@ -1,0 +1,3 @@
+{"service": {"name": "logstash", "tags": ["logstash"]}}
+{"service": {"name": "elasticsearch", "tags": ["tcp","elasticsearch"], "port": 9200}}
+{"service": {"name": "kibana", "tags": ["tcp","kibana"], "port": 5601}}

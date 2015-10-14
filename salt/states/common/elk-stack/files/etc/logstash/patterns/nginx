@@ -1,0 +1,1 @@
+NGINXERRORLOG %{DATESTAMP:timestamp} \[%{LOGLEVEL:level}\] %{GREEDYDATA:message}

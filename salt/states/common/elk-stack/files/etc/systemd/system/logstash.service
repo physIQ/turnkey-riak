@@ -1,0 +1,12 @@
+[Unit]
+Description=Logstash Server Agent
+After=elasticsearch.service
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/logstash
+ExecStart=/opt/logstash/bin/logstash agent --pluginpath /etc -f /etc/logstash/conf.d/logstash.conf --log /var/log/logstash/logstash.log
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

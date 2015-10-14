@@ -1,0 +1,5 @@
+base:
+  '*':
+   - stack
+   - software
+   - servers

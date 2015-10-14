@@ -1,0 +1,17 @@
+[Unit]
+Description=consul
+Requires=network-online.target
+After=network-online.target
+ 
+[Service]
+EnvironmentFile=-/etc/sysconfig/consul
+Restart=on-failure
+ExecStart=/usr/local/sbin/consul agent -config-dir=/etc/consul.d
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+User=daemon
+Group=daemon
+ 
+[Install]
+WantedBy=multi-user.target
+

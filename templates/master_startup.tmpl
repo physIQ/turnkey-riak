@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# Disable selinux
+sed -i 's/enforcing/permissive/g' /etc/selinux/config
+setenforce 0
+
+yum makecache
+yum -y install gcc gcc-c++ python-devel systemd-python epel-release
+sleep 2
+yum -y install python-pip
+
+pip install salt
+
+gsutil -m rsync -r gs://${bucket_name}/salt /srv
+
+mv /srv/states /srv/salt
+
+mkdir /var/log/salt
+mkdir /etc/salt
+
+cat << EOF > /srv/pillar/stack.sls
+stack:
+  stackname: ${stack_name}
+EOF
+
+echo -n "  master_address: " >> /srv/pillar/stack.sls
+ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/' >> /srv/pillar/stack.sls
+
+cat << EOF > /etc/salt/grains
+stack:
+  node_type: master
+  profiles: [ ${salt_profiles} ]
+EOF
+
+cat << EOF > /etc/salt/minion
+master: 127.0.0.1
+
+EOF
+
+cat << EOF > /etc/salt/master
+interface: 0.0.0.0
+reactor:
+  - 'salt/auth':
+    - /srv/reactor/auth-pending.sls
+  - 'salt/minion/${stack_name}-*/start':
+    - /srv/reactor/auth-complete.sls
+
+EOF
+
+cat << EOF > /usr/lib/systemd/system/salt-master.service
+[Unit]
+Description=The Salt Master Server
+After=syslog.target network.target
+
+[Service]
+LimitNOFILE=16384
+Type=notify
+NotifyAccess=all
+ExecStart=/usr/bin/salt-master
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+cat << EOF > /usr/lib/systemd/system/salt-minion.service
+[Unit]
+Description=The Salt Minion Server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+LimitNOFILE=8192
+ExecStart=/usr/bin/salt-minion
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+systemctl daemon-reload
+systemctl enable salt-master
+systemctl enable salt-minion
+
+systemctl start salt-master
+systemctl start salt-minion
+

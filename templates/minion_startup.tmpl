@@ -1,0 +1,45 @@
+#!/bin/bash
+
+sed -i 's/enforcing/permissive/g' /etc/selinux/config
+setenforce 0
+
+yum makecache
+yum -y install gcc gcc-c++ python-devel systemd-python epel-release
+yum -y install python-pip
+
+pip install salt
+
+mkdir /etc/salt
+mkdir /var/log/salt
+
+cat << EOF > /etc/salt/grains
+stack:
+  node_type: minion
+  profiles: [ ${salt_profiles} ]
+EOF
+
+cat << EOF > /etc/salt/minion
+master: ${master_address}
+
+EOF
+
+cat << EOF > /usr/lib/systemd/system/salt-minion.service
+[Unit]
+Description=The Salt Minion
+After=syslog.target network.target
+
+[Service]
+Type=simple
+LimitNOFILE=8192
+ExecStart=/usr/bin/salt-minion
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+systemctl daemon-reload
+systemctl enable salt-minion
+systemctl start salt-minion
+

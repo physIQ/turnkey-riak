@@ -1,0 +1,44 @@
+upstream haproxy8098 {  {{range service "haproxy"}}
+	server {{.Address}};{{end}}
+	}
+
+upstream haproxy8093 {  {{range service "haproxy"}}
+	server {{.Address}};{{end}}
+	}
+
+server {
+	listen 4980 default_server;
+	listen [::]:4980 default_server ipv6only=on;
+
+	root /opt/banana/src;
+	index index.html index.htm;
+
+	# Make site accessible from http://localhost/
+	server_name localhost;
+
+	location ^~ /solr/ {
+		proxy_set_header Referer "";
+		location ~* /solr/query {
+      		rewrite /solr(.*) /search$1 break;
+		proxy_pass http://haproxy8098;
+		}
+		location ~* /solr/[^/]*/select {
+		proxy_pass http://haproxy8098;
+		}
+		rewrite /solr(.*) /internal_solr$1 break;
+		proxy_pass http://haproxy8093;
+	}
+	location /internal_solr {
+		proxy_pass http://haproxy8093;
+	}
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+		# Uncomment to enable naxsi on this location
+		# include /etc/nginx/naxsi.rules
+	}
+}
+

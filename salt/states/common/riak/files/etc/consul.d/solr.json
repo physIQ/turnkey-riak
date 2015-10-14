@@ -1,0 +1,2 @@
+{"service": {"name": "solr", "tags": ["riak","solr"], "port": 8093 }},
+

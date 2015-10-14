@@ -1,0 +1,10 @@
+{"service": {"name": "riak", "tags": ["riak"] }},
+{
+ "check": {
+    "id": "riak",
+    "name": "riak status",
+    "service_id": "riak",
+    "script": "/sbin/riak-admin",
+    "interval": "60s"
+  }
+}

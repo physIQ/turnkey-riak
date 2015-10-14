@@ -1,0 +1,5 @@
+[Zabbix]
+name=Zabbix
+baseurl=http://repo.zabbix.com/zabbix/2.4/rhel/7/x86_64/
+gpgcheck=1
+gpgkey=http://repo.zabbix.com/zabbix-official-repo.key

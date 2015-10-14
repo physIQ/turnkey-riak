@@ -1,0 +1,15 @@
+[Unit]
+Description=Consul-Template Daemon
+Wants=basic.target
+After=basic.target network.target
+
+[Service]
+ExecStart=/usr/local/sbin/consul-template -config /etc/consul-template.d/configs
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

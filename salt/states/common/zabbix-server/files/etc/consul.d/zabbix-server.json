@@ -1,0 +1,1 @@
+{"service": {"name": "zabbix-server", "tags": ["tcp","zabbix","zabbix-server"], "port": 10051}}
