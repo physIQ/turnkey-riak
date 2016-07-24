@@ -11,7 +11,7 @@ variable "salt_profiles" {}
 variable "master_address" {}
 
 resource "template_file" "minion_startup" {
-        filename = "templates/minion_startup.tmpl"
+        template = "${file("templates/minion_startup.tmpl")}"
 
         vars {
                 stack_name = "${var.StackName}"
@@ -34,7 +34,7 @@ resource "google_compute_instance" "instance" {
 		}
 
 		network_interface = {
-			network = "${var.NetworkName}"
+			subnetwork = "${var.NetworkName}"
 			access_config { }
 		}
 

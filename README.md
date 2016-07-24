@@ -6,11 +6,11 @@ Create a turnkey solution for building, monitoring, and working with a riak clus
 
 **Implementation**
 
-In order to make a large scale cluster available to the masses, the solution must leverage a Public Cloud Platform. To start, this project has focused on working with Google's [Cloud Platform](https://cloud.google.com/). However, the project has no hard dependencies on any one cloud provider and support for other platforms will be added over time. 
+In order to make a large scale cluster available to the masses, the solution must leverage a Public Cloud Platform. To start, this project has focused on working with Google's [Cloud Platform](https://cloud.google.com/). However, the project has no hard dependencies on any one cloud provider and support for other platforms will be added over time.
 
-Making the the solution "Turnkey" requires a lot of automation. Specifically cloud orchestration and configuration management. Turnkey Riak uses Hashicorp's [Terraform](http://www.terraform.io) for cloud orchestration. This tool runs locally on a users computer and fully provisions the network and servers in the cloud platform. Terraform will also bootstrap each server such that [Salt](http://saltstack.com) can take over the configuration management of each server instance. Salt further leverages Hashicorp's [consul](http://www,.consul.io) and [consul-template](https://github.com/hashicorp/consul-template) products for service discovery and dynamic configuration files. 
+Making the the solution "Turnkey" requires a lot of automation; specifically, cloud orchestration and configuration management. Turnkey Riak uses Hashicorp's [Terraform](http://www.terraform.io) for cloud orchestration. This tool runs locally on a users computer and fully provisions the network and servers in the cloud platform. Terraform will also bootstrap each server such that [Salt](http://saltstack.com) can take over the configuration management of each server instance. Salt further leverages Hashicorp's [consul](http://www,.consul.io) and [consul-template](https://github.com/hashicorp/consul-template) products for service discovery and dynamic configuration files.
 
-Practically speaking, you cannot use a large cluster without the help of some supporting services. Initially, Turnkey Riak provides two of these supporting services. The first being centralized server monitoring provided by [Zabbix](http://www.zabbix.com). Zabbix allows the user to monitor the performance and health of every node in the cluster. The second supporting service is centralized logging provided by Elastic's [ELK Stack](https://www.elastic.co). ELK Stack will centralize the logs from all servers in on location for easy querying.   
+Practically speaking, you cannot use a large cluster without the help of some supporting services. Initially, Turnkey Riak provides two of these supporting services, the first being centralized server monitoring provided by [Zabbix](http://www.zabbix.com). Zabbix allows the user to monitor the performance and health of every node in the cluster. The second supporting service is centralized logging provided by Elastic's [ELK Stack](https://www.elastic.co). ELK Stack will centralize the logs from all servers in on location for easy querying.   
 
 ## How It Works ##
 
@@ -24,7 +24,7 @@ A network will be created in your defined GCE project.  Using firewall rules, on
 
 **Server Instances**
 
-* Monitoring Server 
+* Monitoring Server
 
     * This server runs the [Zabbix](http://www.zabbix.com/) monitoring system.  It will gather various performance counters and allow you to track and evaluate the performance of the cluster.  Additionally this server is the salt master while also running a salt minion to configure itself.
 
@@ -46,7 +46,7 @@ A variety of software will be installed on the different servers.  Here is a gen
 
 * [CentOS 7](https://www.centos.org)
 
-    *A Google Compute Engine instance of CentOS 7 will be used as the base image for each server instance in the stack.
+    * A Google Compute Engine instance of CentOS 7 will be used as the base image for each server instance in the stack.
 
 * [Salt](http://saltstack.com)
 
@@ -96,50 +96,50 @@ Once the project is executed as detailed below the following actions will occur:
 
 5. At this point each of the servers should have registered with the consul service.  A variety of additional steps will then be run on each server via consul-template, such as haproxy servers auto-configuring themselves to load balance amongst the riak servers, and the riak servers joining a cluster together.
 
-## Usage ## 
+## Usage ##
 
 #### Prerequisites ####
 
 1. Local Computer
-    
+
     - This project should run under any Linux distribution without issue. It should also run without issue under OS X.  Theoretically it should also be usable under Windows.
-    
+
 2. Google Cloud Platform Account
-    
+
     - Sign up for a Google Cloud Platform account [here](https://cloud.google.com)   
 
 3. Google Cloud SDK Installed
-    
+
     - Follow the instructions at [https://cloud.google.com/sdk/](https://cloud.google.com/sdk/).  Once finished the command-line utilities should be installed.
 
 4. Google Account File Downloaded
-    
+
     - In order for terraform to access your Google Compute Engine account you will need to provide it credentials.  In the Google Developer's console:
-    
+
         a. Go to "APIs & auth" and click "Credentials"
         b. Click "Add Credentials" and select "Service Account"
         c. After selecting "Service Account" make sure the radio button in front of JSON is selected, and click "Create"
-        d. After a moment it will trigger a download.  Save this file for later 
+        d. After a moment it will trigger a download.  Save this file for later
 
 5. Terraform Installed
 
     - Download and Install Terraform from [https://terraform.io/downloads.html](https://terraform.io/downloads.html)
     - As noted, you need to extract the zip file and place the binaries somewhere on your executable path
-    
+
 6. Turnkey Riak Repository Cloned
-   
-    - git clone [https://github.com/physIQ/turnkey-riak.git](https://github.com/physIQ/turnkey-riak.git) 
-    
-    
+
+    - git clone [https://github.com/physIQ/turnkey-riak.git](https://github.com/physIQ/turnkey-riak.git)
+
+
 ###Configure Turnkey Riak###
 
-1. Add Google Account File to Terraform 
+1. Add Google Account File to Terraform
 
     * Simply copy the file from #4 in the prerequisites section to the root directory of the Turnkey Riak project and rename it "account.json"
-  
+
 2. Set Terraform Variables
 
-Terraform uses configuration files written in HCL (hashicorp configuration language).  There are a number of variables to set in the 000-variables.tf file.  The variables marked with "CHANGE REQUIRED" must be changed before you execute Terraform.  Changes to the other variables are optional and will allow you to increase the size and hardware used for the riak cluster. 
+Terraform uses configuration files written in HCL (hashicorp configuration language).  There are a number of variables to set in the 000-variables.tf file.  The variables marked with "CHANGE REQUIRED" must be changed before you execute Terraform.  Changes to the other variables are optional and will allow you to increase the size and hardware used for the riak cluster.
 
 - **StackName - CHANGE REQUIRED**
 
@@ -158,7 +158,7 @@ Terraform uses configuration files written in HCL (hashicorp configuration langu
     - The number of haproxy and riak instances to create.  The total number of instances created will be the sum of these numbers plus two - a Zabbix monitoring server and ELK-stack logging server.
 
 - **machine_type**
-	
+
 	- This sets the Google machine type for the instances.  Each are separately configurable.  For a list of Google machine types, see [https://cloud.google.com/compute/docs/machine-types](https://cloud.google.com/compute/docs/machine-types)
 
 - **region_info**
@@ -188,11 +188,11 @@ You should not need to modify any of the other variables or files.
    * In the root directory of the Turnkey Riak project execute the following from the command line:
 
         terraform plan
-        
+
 3. Run Terraform
 
    * In the root directory of the Turnkey Riak project execute the following from the command line:
-   
+
         terraform apply
 
 Terraform will now connect to your GCE account and execute as detailed above.  You will see output from terraform detailing the various resources it is creating.  Once terraform has finished you will have to wait for the servers to finish their auto-configuration.  If you wish to monitor these steps, you can log into a server using "gcloud compute ssh server-name" and tail the log file /var/log/startupscript.log.  Once this script has finished executing salt will begin registering with the salt master and executing the highstate.  Once the highstate on a server has finished you should be able to see it by running "consul members"; this will give you a list of all instances that have registered with the consul cluster.
@@ -214,16 +214,13 @@ Once finished you can run the command "terraform destroy" in the root directory 
 
 - Cant Access Servers
     - Make sure that the IP addres of the computer you are trying to access the stack from is within a range configured as the trusted IP addresses
-    
+
 ## Notes ##
 **Known Issues**
 
-- Terraform 0.6.3 currently has a resource/naming bug that can pop up.  If this occurs you may need to manually delete any resources in the Google Cloud interface (virtual machine instances, the network created by terraform, secondary disks, and the storage bucket).  Afterwards, delete the files "terraform.tfstate", "terraform.tfstate.bak", and the directory ".terraform".  This will get terraform back to a pristine state.
-- If you encounter any errors due to a misconfigured variable or connection errors, you may have to peform the above steps to re-run the project.
-- Due to this bug you may not be able to add additional instances after the first execution.  If you need more instances you will need to destroy the stack as under "Cleanup", modify the instance_count variable, delete the directories as above, and rerun the execution steps.
-- You may see errors at the end of the cleanup due to this bug as well.  The destroy process should have still deleted all of the resources.
+- Terraform 0.6.16 has a bug which will cause secondary disks to be destroyed before the instance is destroyed, resulting in "resourceInUseByAnotherResource" errors.  Typically you can simply run "terraform destroy" a second time to clean up the remaining disks.
 
 **Future Improvements**   
- 
- - Support for other Cloud Platform ( AWS, Azure, etc) 
- - Add additional cluster support services 
+
+ - Support for other Cloud Platform ( AWS, Azure, etc)
+ - Add additional cluster support services
