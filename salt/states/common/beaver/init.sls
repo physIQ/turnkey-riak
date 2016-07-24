@@ -16,12 +16,12 @@ include:
 #INSTALL BEAVER
 beaver:
   pip.installed:
-    - name: beaver==33.3.0
+    - name: beaver
   service:
     - running
     - enable: True
     - require:
-      - pip: beaver==33.3.0
+      - pip: beaver
       - file: /etc/systemd/system/beaver.service
     - watch:
       - file: /etc/beaver/*

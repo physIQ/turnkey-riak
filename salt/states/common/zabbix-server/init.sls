@@ -71,7 +71,7 @@ zabbix:
   require:
     - service: postgresql
 
-psql zabbix < /usr/share/doc/zabbix-server-pgsql-{{ salt['pillar.get']('software:zabbix:version') }}/create/schema.sql && psql zabbix < /usr/share/doc/zabbix-server-pgsql-{{ salt['pillar.get']('software:zabbix:version') }}/create/images.sql && psql zabbix < /usr/share/doc/zabbix-server-pgsql-{{ salt['pillar.get']('software:zabbix:version') }}/create/data.sql:
+psql zabbix < /usr/share/doc/zabbix-server-pgsql-`rpm -q --qf "%{VERSION}\n" zabbix`/create/schema.sql && psql zabbix < /usr/share/doc/zabbix-server-pgsql-`rpm -q --qf "%{VERSION}\n" zabbix`/create/images.sql && psql zabbix < /usr/share/doc/zabbix-server-pgsql-`rpm -q --qf "%{VERSION}\n" zabbix`/create/data.sql:
   cmd.run:
     - user: zabbix
 

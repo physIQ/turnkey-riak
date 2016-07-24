@@ -13,7 +13,7 @@ variable "salt_profiles" {}
 variable "master_address" {}
 
 resource "template_file" "minion_startup" {
-        filename = "templates/minion_startup.tmpl"
+        template = "${file("templates/minion_startup.tmpl")}"
 
         vars {
                 stack_name = "${var.StackName}"
@@ -51,14 +51,16 @@ resource "google_compute_instance" "instance" {
 		disk {
                         disk = "${format("${var.StackName}-${var.name}-%02d-disk-01", count.index+1)}"
                         device_name = "tsSSD"
+                        auto_delete = false
                 }
                 disk {
                         disk = "${format("${var.StackName}-${var.name}-%02d-disk-02", count.index+1)}"
                         device_name = "tsMagnetic"
+                        auto_delete = false
                 }
 
 		network_interface = {
-			network = "${var.NetworkName}"
+			subnetwork = "${var.NetworkName}"
 			access_config { }
 		}
 

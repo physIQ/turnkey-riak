@@ -35,9 +35,13 @@ zabbix-find-dbname-table-monitor:
     - require:
       - pkg: zabbix-agent
 
+protobuf-c-devel:
+  pkg.installed
+
 gcloud:
   pip.installed:
   - name: gcloud
   require:
   - pkg: common.gcc
+  - pkg: protobuf-c-devel
 
