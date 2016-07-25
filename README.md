@@ -212,13 +212,12 @@ Once finished you can run the command "terraform destroy" in the root directory 
 
 ### Troubleshooting ###
 
-- Cant Access Servers
+- Can't Access Servers
     - Make sure that the IP addres of the computer you are trying to access the stack from is within a range configured as the trusted IP addresses
 
 ## Notes ##
 **Known Issues**
-
-- Terraform 0.6.16 has a bug which will cause secondary disks to be destroyed before the instance is destroyed, resulting in "resourceInUseByAnotherResource" errors.  Typically you can simply run "terraform destroy" a second time to clean up the remaining disks.
+ - None at this time.
 
 **Future Improvements**   
 
