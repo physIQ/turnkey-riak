@@ -49,12 +49,12 @@ resource "google_compute_instance" "instance" {
 			image = "${var.google_image}"
 		}
 		disk {
-                        disk = "${format("${var.StackName}-${var.name}-%02d-disk-01", count.index+1)}"
+                        disk = "${element(google_compute_disk.riakDiskSSD.*.name, count.index)}"
                         device_name = "tsSSD"
                         auto_delete = false
                 }
                 disk {
-                        disk = "${format("${var.StackName}-${var.name}-%02d-disk-02", count.index+1)}"
+                        disk = "${element(google_compute_disk.riakDiskMagnetic.*.name, count.index)}"
                         device_name = "tsMagnetic"
                         auto_delete = false
                 }
